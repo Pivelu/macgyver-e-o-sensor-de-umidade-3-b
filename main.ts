@@ -6,8 +6,10 @@ basic.forever(function () {
     umidade = pins.analogReadPin(AnalogPin.P1)
     if (umidade > 1000) {
         basic.showIcon(IconNames.Square)
-    } else if (umidade > 800) {
+    } else if (umidade > 401) {
         basic.showIcon(IconNames.Happy)
+    } else if (umidade < 250) {
+        basic.showIcon(IconNames.Confused)
     } else {
         basic.showIcon(IconNames.Sad)
     }
